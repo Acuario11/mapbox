@@ -63,7 +63,7 @@ class _FullScreenMapState extends State<FullScreenMap> {
            onPressed: (){
              mapController?.addSymbol( SymbolOptions(
              geometry: center,
-             //iconSize: 2.5,
+             iconSize: 2.5,
              iconImage: 'attraction-15',
              textField: 'Montaña creada aquí',
              //textColor: '#cccccc' ,
@@ -105,7 +105,7 @@ class _FullScreenMapState extends State<FullScreenMap> {
             selectedStyle = streets_g;
           }else{
             selectedStyle = mono_verde;
-          }if(selectedStyle == streets_g){
+          }if(selectedStyle == mono_verde){
             selectedStyle = satellite;
           }
 
