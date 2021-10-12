@@ -93,7 +93,6 @@ class _FullScreenMapState extends State<FullScreenMap> {
              mapController?.animateCamera(CameraUpdate.zoomOut());
            }
        ),
-
        SizedBox(height: 5),
 
       //cambiar Estilos de Mapa
@@ -104,11 +103,12 @@ class _FullScreenMapState extends State<FullScreenMap> {
           if (selectedStyle == mono_verde){
             selectedStyle = streets_g;
           }else{
-            selectedStyle = mono_verde;
-          }if(selectedStyle == mono_verde){
-            selectedStyle = satellite;
+            if(selectedStyle == streets_g){
+              selectedStyle = satellite;
+            }else{
+              selectedStyle = mono_verde;
+            }
           }
-
           setState(() {});
         }
        )
